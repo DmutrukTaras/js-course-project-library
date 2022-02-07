@@ -1,1 +1,4 @@
-console.log('Hello!');
+import './lib/lib';
+
+$('div.active').hide().addClass('hello', 'World');
+$('div').toggle().toggle();
