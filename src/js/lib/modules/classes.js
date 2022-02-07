@@ -17,7 +17,8 @@ $.prototype.removeClass = function (...classNames) {
 }
 
 $.prototype.toggleClass = function (className) {
-    this[i].classList.toggle(className);
-
+    for (let i = 0; i < this.length; i++) {
+        this[i].classList.toggle(className);
+    }
     return this;
 }

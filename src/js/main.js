@@ -1,4 +1,17 @@
 import './lib/lib';
 
-$('div.active').hide().addClass('hello', 'World');
-$('div').toggle().toggle();
+$('div.active').addAttribute('disabled', 'disabled');
+
+
+$('button').on('click', function () {
+    $(this).toggleClass('active');
+    $('div').toggleAttribute('disabled');
+})
+
+
+
+
+
+function sayHello() {
+    console.log('sayHello');
+}
