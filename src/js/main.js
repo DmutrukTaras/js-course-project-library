@@ -5,8 +5,19 @@ $('div.active').addAttribute('disabled', 'disabled');
 
 $('button').on('click', function () {
     $(this).toggleClass('active');
-    $('div').toggleAttribute('disabled');
+    $('div').eq(2).toggleAttribute('disabled');
 })
+$('div').click(function () {
+    console.log($(this).index());
+})
+
+console.log($('.more').eq(0).siblings());
+//console.log($('.findme').siblings());
+
+//console.log($('.some').closest('.findme').addClass('asdasd'));
+
+
+
 
 
 
