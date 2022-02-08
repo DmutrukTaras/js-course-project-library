@@ -1,28 +1,14 @@
 import './lib/lib';
 
-$('div.active').addAttribute('disabled', 'disabled');
+$('#first').click(() => {
+    $('div.w-500').eq(0).fadeOut(800);
+});
+
+$('[data-count="second"]').click(() => {
+    $('div.w-500').eq(1).fadeOut(800);
+});
 
 
-$('button').on('click', function () {
-    $(this).toggleClass('active');
-    $('div').eq(2).toggleAttribute('disabled');
-})
-$('div').click(function () {
-    console.log($(this).index());
-})
-
-console.log($('.more').eq(0).siblings());
-//console.log($('.findme').siblings());
-
-//console.log($('.some').closest('.findme').addClass('asdasd'));
-
-
-
-
-
-
-
-
-function sayHello() {
-    console.log('sayHello');
-}
+$('button').eq(2).click(() => {
+    $('div.w-500').fadeOut(800);
+});
